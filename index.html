@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="icon/calculator.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="js.js"></script>
+    <title>CGPA & SGPA Calculator</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">CGPA AND SGPA Calculator</a>
+        </div>
+    </nav>
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                    aria-expanded="false" aria-controls="collapseOne">
+                    1 SEMESTER <span class="sgpa-1 accord"></span>
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <form id="form-1" onsubmit="formdata(1,9); return false;">
+                        <h2>Enter Subject Credits and Marks</h2>
+
+                        <label for="1-sub-1-credits">Calculus & Differential Equations/Advanced Calculus and Numerical Methods - Credits:</label>
+                        <input type="number" id="1-sub-1-credits" name="1-sub-1-credits" value="3" min="0" max="10"
+                            readonly>
+                        <label for="1-sub-1-marks">Marks:</label>
+                        <input type="number" id="1-sub-1-marks" name="1-sub-1-marks" min="0" max="100" required>
+
+                        <br><br>
+
+                        <label for="1-sub-2-credits">Engineering Chemistry  - Credits:</label>
+                        <input type="number" id="1-sub-2-credits" name="1-sub-2-credits" value="3" min="0" max="10"
+                            readonly>
+                        <label for="1-sub-2-marks">Marks:</label>
+                        <input type="number" id="1-sub-2-marks" name="1-sub-2-marks" min="0" max="100" required>
+
+                        <br><br>
+
+                        <label for="1-sub-3-credits">Problem-Solving through Programming - Credits:</label>
+                        <input type="number" id="1-sub-3-credits" name="1-sub-3-credits" value="3" min="0" max="10"
+                            readonly>
+                        <label for="1-sub-3-marks">Marks:</label>
+                        <input type="number" id="1-sub-3-marks" name="1-sub-3-marks" min="0" max="100" required>
+
+                        <br><br>
+                        <label for="1-sub-4-credits">Basic Electronics & Communication Engineering - Credits:</label>
+                        <input type="number" id="1-sub-4-credits" name="1-sub-4-credits" value="3" min="0" max="10"
+                            readonly>
+                        <label for="1-sub-4-marks">Marks:</label>
+                        <input type="number" id="1-sub-4-marks" name="1-sub-4-marks" min="0" max="100" required>
+
+                        <br><br>
+                        <label for="1-sub-5-credits">Elements of Mechanical Engineering- Credits:</label>
+                        <input type="number" id="1-sub-5-credits" name="1-sub-5-credits" value="3" min="0" max="10"
+                            readonly>
+                        <label for="1-sub-5-marks">Marks:</label>
+                        <input type="number" id="1-sub-5-marks" name="1-sub-5-marks" min="0" max="100" required>
+
+                        <br><br>
+                        <label for="1-sub-6-credits">Engineering Chemistry Laboratory - Credits:</label>
+                        <input type="number" id="1-sub-6-credits" name="1-sub-6-credits" value="1" min="0" max="10"
+                            readonly>
+                        <label for="1-sub-6-marks">Marks:</label>
+                        <input type="number" id="1-sub-6-marks" name="1-sub-6-marks" min="0" max="100" required>
+
+                        <br><br>
+                        <label for="1-sub-7-credits">Computer Programming Laboratory - Credits:</label>
+                        <input type="number" id="1-sub-7-credits" name="1-sub-7-credits" value="1" min="0" max="10"
+                            readonly>
+                        <label for="1-sub-7-marks">Marks:</label>
+                        <input type="number" id="1-sub-7-marks" name="1-sub-7-marks" min="0" max="100" required>
+
+                        <br><br>
+                        <label for="1-sub-8-credits">Communicative English/Professional Writing Skills in English - Credits:</label>
+                        <input type="number" id="1-sub-8-credits" name="1-sub-8-credits" value="2" min="0" max="10"
+                            readonly>
+                        <label for="1-sub-8-marks">Marks:</label>
+                        <input type="number" id="1-sub-8-marks" name="1-sub-8-marks" min="0" max="100" required>
+
+                        <br><br>
+                        <label for="1-sub-9-credits">Innovation and Design Thinking/Scientific Foundations of Health -
+                            Credits:</label>
+                        <input type="number" id="1-sub-9-credits" name="1-sub-9-credits" value="1" min="0" max="10"
+                            readonly>
+                        <label for="1-sub-9-marks">Marks:</label>
+                        <input type="number" id="1-sub-9-marks" name="1-sub-9-marks" min="0" max="100" required>
+
+                        <br><br>
+                        <!-- Repeat similar blocks for other subjects -->
+
+                        <input type="submit" value="Submit">
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    2 SEMESTER
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <form id="form-2" onsubmit="formdata(2,9); return false;">
+                            <h2>Enter Subject Credits and Marks</h2>
+
+                            <label for="2-sub-1-credits">Calculus & Differential Equations/Advanced Calculus and Numerical Methods - Credits:</label>
+                            <input type="number" id="2-sub-1-credits" name="2-sub-1-credits" value="3" min="0" max="10"
+                                readonly>
+                            <label for="2-sub-1-marks">Marks:</label>
+                            <input type="number" id="2-sub-1-marks" name="2-sub-1-marks" min="0" max="100" required>
+
+                            <br><br>
+
+                            <label for="2-sub-2-credits">Engineering Physics - Credits:</label>
+                            <input type="number" id="2-sub-2-credits" name="2-sub-2-credits" value="3" min="0" max="10"
+                                readonly>
+                            <label for="2-sub-2-marks">Marks:</label>
+                            <input type="number" id="2-sub-2-marks" name="2-sub-2-marks" min="0" max="100" required>
+
+                            <br><br>
+
+                            <label for="2-sub-3-credits">Basic Electrical Engineering - Credits:</label>
+                            <input type="number" id="2-sub-3-credits" name="2-sub-3-credits" value="3" min="0" max="10"
+                                readonly>
+                            <label for="2-sub-3-marks">Marks:</label>
+                            <input type="number" id="2-sub-3-marks" name="2-sub-3-marks" min="0" max="100" required>
+
+                            <br><br>
+                            <label for="2-sub-4-credits">Elements of Civil Engineering and Mechanics- Credits:</label>
+                            <input type="number" id="2-sub-4-credits" name="2-sub-4-credits" value="3" min="0" max="10"
+                                readonly>
+                            <label for="2-sub-4-marks">Marks:</label>
+                            <input type="number" id="2-sub-4-marks" name="2-sub-4-marks" min="0" max="100" required>
+
+                            <br><br>
+                            <label for="2-sub-5-credits">Engineering Visualization - Credits:</label>
+                            <input type="number" id="2-sub-5-credits" name="2-sub-5-credits" value="3" min="0" max="10"
+                                readonly>
+                            <label for="2-sub-5-marks">Marks:</label>
+                            <input type="number" id="2-sub-5-marks" name="2-sub-5-marks" min="0" max="100" required>
+
+                            <br><br>
+                            <label for="2-sub-6-credits">Engineering Physics Laboratory - Credits:</label>
+                            <input type="number" id="2-sub-6-credits" name="2-sub-6-credits" value="1" min="0" max="10"
+                                readonly>
+                            <label for="2-sub-6-marks">Marks:</label>
+                            <input type="number" id="2-sub-6-marks" name="2-sub-6-marks" min="0" max="100" required>
+
+                            <br><br>
+                            <label for="2-sub-7-credits">Basic Electrical Engineering Laboratory - Credits:</label>
+                            <input type="number" id="2-sub-7-credits" name="2-sub-7-credits" value="1" min="0" max="10"
+                                readonly>
+                            <label for="2-sub-7-marks">Marks:</label>
+                            <input type="number" id="2-sub-7-marks" name="2-sub-7-marks" min="0" max="100" required>
+
+                            <br><br>
+                            <label for="2-sub-8-credits">Communicative English/Professional Writing Skills in English - Credits: - Credits:</label>
+                            <input type="number" id="2-sub-8-credits" name="2-sub-8-credits" value="2" min="0" max="10"
+                                readonly>
+                            <label for="2-sub-8-marks">Marks:</label>
+                            <input type="number" id="2-sub-8-marks" name="2-sub-8-marks" min="0" max="100" required>
+
+                            <br><br>
+                            <label for="2-sub-9-credits">Innovation and Design Thinking/Scientific Foundations of Health -
+                                Credits:</label>
+                            <input type="number" id="2-sub-9-credits" name="2-sub-9-credits" value="1" min="0" max="10"
+                                readonly>
+                            <label for="2-sub-9-marks">Marks:</label>
+                            <input type="number" id="2-sub-9-marks" name="2-sub-9-marks" min="0" max="100" required>
+
+                            <br><br>
+
+                            <input type="submit" value="Submit">
+                        </form>
+
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    3 SEMESTER
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <form id="form-3" onsubmit="formdata(3,8); return false;">
+                            <h2>Enter Subject Credits and Marks</h2>
+
+                            <label for="3-sub-1-credits">Transform Calculus, Fourier Series and Numerical Techniques </label>
+                            <input type="number" id="3-sub-1-credits" name="3-sub-1-credits" value="3" min="0" max="10"
+                                readonly>
+                            <label for="3-sub-1-marks">Marks:</label>
+                            <input type="number" id="3-sub-1-marks" name="3-sub-1-marks" min="0" max="100" required>
+
+                            <br><br>
+
+                            <label for="3-sub-2-credits">Data Structures and Applications - Credits:</label>
+                            <input type="number" id="3-sub-2-credits" name="3-sub-2-credits" value="4" min="0" max="10"
+                                readonly>
+                            <label for="3-sub-2-marks">Marks:</label>
+                            <input type="number" id="3-sub-2-marks" name="3-sub-2-marks" min="0" max="100" required>
+
+                            <br><br>
+
+                            <label for="3-sub-3-credits">Analog and Digital Electronics - Credits:</label>
+                            <input type="number" id="3-sub-3-credits" name="3-sub-3-credits" value="4" min="0" max="10"
+                                readonly>
+                            <label for="3-sub-3-marks">Marks:</label>
+                            <input type="number" id="3-sub-3-marks" name="3-sub-3-marks" min="0" max="100" required>
+
+                            <br><br>
+                            <label for="3-sub-4-credits">Computer Organization and Architecture - Credits:</label>
+                            <input type="number" id="3-sub-4-credits" name="3-sub-4-credits" value="3" min="0" max="10"
+                                readonly>
+                            <label for="3-sub-4-marks">Marks:</label>
+                            <input type="number" id="3-sub-4-marks" name="3-sub-4-marks" min="0" max="100" required>
+
+                            <br><br>
+                            <label for="3-sub-5-credits">Object Oriented Programming with JAVA Laboratory - Credits:</label>
+                            <input type="number" id="3-sub-5-credits" name="3-sub-5-credits" value="1" min="0" max="10"
+                                readonly>
+                            <label for="3-sub-5-marks">Marks:</label>
+                            <input type="number" id="3-sub-5-marks" name="3-sub-5-marks" min="0" max="100" required>
+
+                            <br><br>
+                            <label for="3-sub-6-credits">Social Connect and Responsibility - Credits:</label>
+                            <input type="number" id="3-sub-6-credits" name="3-sub-6-credits" value="1" min="0" max="10"
+                                readonly>
+                            <label for="3-sub-6-marks">Marks:</label>
+                            <input type="number" id="3-sub-6-marks" name="3-sub-6-marks" min="0" max="100" required>
+
+                            <br><br>
+                            <label for="3-sub-7-credits">Kannada/Constitution of India and Professional Ethics - Credits:</label>
+                            <input type="number" id="3-sub-7-credits" name="3-sub-7-credits" value="1" min="0" max="10"
+                                readonly>
+                            <label for="3-sub-7-marks">Marks:</label>
+                            <input type="number" id="3-sub-7-marks" name="3-sub-7-marks" min="0" max="100" required>
+
+                            <br><br>
+                            <label for="3-sub-8-credits"> Ability Enhancement Course - III - Credits:</label>
+                            <input type="number" id="3-sub-8-credits" name="3-sub-8-credits" value="1" min="0" max="10"
+                                readonly>
+                            <label for="3-sub-8-marks">Marks:</label>
+                            <input type="number" id="3-sub-8-marks" name="3-sub-8-marks" min="0" max="100" required>
+
+                            <br><br>
+                            <input type="submit" value="Submit">
+                        </form>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingfour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+                    4 SEMESTER
+                </button>
+            </h2>
+            <div id="collapsefour" class="accordion-collapse collapse" aria-labelledby="headingfour"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <form id="form-4" onsubmit="formdata(4,10); return false;">
+                        <h2>Enter Subject Credits and Marks</h2>
+
+                        <label for="4-sub-1-credits">Mathematical Foundations for Computing </label>
+                        <input type="number" id="4-sub-1-credits" name="4-sub-1-credits" value="3" min="0" max="10"
+                            readonly>
+                        <label for="4-sub-1-marks">Marks:</label>
+                        <input type="number" id="4-sub-1-marks" name="4-sub-1-marks" min="0" max="100" required>
+
+                        <br><br>
+
+                        <label for="4-sub-2-credits">Design and Analysis of Algorithms - Credits:</label>
+                        <input type="number" id="4-sub-2-credits" name="4-sub-2-credits" value="4" min="0" max="10"
+                            readonly>
+                        <label for="4-sub-2-marks">Marks:</label>
+                        <input type="number" id="4-sub-2-marks" name="4-sub-2-marks" min="0" max="100" required>
+
+                        <br><br>
+
+                        <label for="4-sub-3-credits">Microcontroller and Embedded Systems - Credits:</label>
+                        <input type="number" id="4-sub-3-credits" name="4-sub-3-credits" value="4" min="0" max="10"
+                            readonly>
+                        <label for="4-sub-3-marks">Marks:</label>
+                        <input type="number" id="4-sub-3-marks" name="4-sub-3-marks" min="0" max="100" required>
+
+                        <br><br>
+                        <label for="4-sub-4-credits">Operating Systems - Credits:</label>
+                        <input type="number" id="4-sub-4-credits" name="4-sub-4-credits" value="3" min="0" max="10"
+                            readonly>
+                        <label for="4-sub-4-marks">Marks:</label>
+                        <input type="number" id="4-sub-4-marks" name="4-sub-4-marks" min="0" max="100" required>
+
+                        <br><br>
+                        <label for="4-sub-5-credits">Biology For Engineers - Credits:</label>
+                        <input type="number" id="4-sub-5-credits" name="4-sub-5-credits" value="2" min="0" max="10"
+                            readonly>
+                        <label for="4-sub-5-marks">Marks:</label>
+                        <input type="number" id="4-sub-5-marks" name="4-sub-5-marks" min="0" max="100" required>
+
+                        <br><br>
+                        <label for="4-sub-6-credits">Python Programming Laboratory - Credits:</label>
+                        <input type="number" id="4-sub-6-credits" name="4-sub-6-credits" value="1" min="0" max="10"
+                            readonly>
+                        <label for="4-sub-6-marks">Marks:</label>
+                        <input type="number" id="4-sub-6-marks" name="4-sub-6-marks" min="0" max="100" required>
+
+                        <br><br>
+                        <label for="4-sub-7-credits">Kannada/Constitution of India and Professional Ethics - Credits:</label>
+                        <input type="number" id="4-sub-7-credits" name="4-sub-7-credits" value="1" min="0" max="10"
+                            readonly>
+                        <label for="4-sub-7-marks">Marks:</label>
+                        <input type="number" id="4-sub-7-marks" name="4-sub-7-marks" min="0" max="100" required>
+
+                        <br><br>
+                        <label for="4-sub-8-credits"> Ability Enhancement Course- IV - Credits:</label>
+                        <input type="number" id="4-sub-8-credits" name="4-sub-8-credits" value="1" min="0" max="10"
+                            readonly>
+                        <label for="4-sub-8-marks">Marks:</label>
+                        <input type="number" id="4-sub-8-marks" name="4-sub-8-marks" min="0" max="100" required>
+
+                        <br><br>
+                        <label for="4-sub-9-credits">Universal Human Values - Credits:</label>
+                        <input type="number" id="4-sub-9-credits" name="4-sub-9-credits" value="1" min="0" max="10"
+                            readonly>
+                        <label for="4-sub-9-marks">Marks:</label>
+                        <input type="number" id="4-sub-9-marks" name="4-sub-9-marks" min="0" max="100" required>
+
+                        <br><br>
+                        <label for="4-sub-10-credits">Inter/Intra Institutional Internship - Credits:</label>
+                        <input type="number" id="4-sub-10-credits" name="4-sub-10-credits" value="2" min="0" max="10"
+                            readonly>
+                        <label for="4-sub-10-marks">Marks:</label>
+                        <input type="number" id="4-sub-10-marks" name="4-sub-10-marks" min="0" max="100" required>
+
+                        <br><br>
+                        <!-- Repeat similar blocks for other subjects -->
+
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingfive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                    5 SEMESTER
+                </button>
+            </h2>
+            <div id="collapsefive" class="accordion-collapse collapse" aria-labelledby="headingfive"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <form id="form-5" onsubmit="formdata(5,8); return false;">
+                        <h2>Enter Subject Credits and Marks</h2>
+
+                        <label for="5-sub-1-credits">Automata Theory and compiler Design - Credits:</label>
+                        <input type="number" id="5-sub-1-credits" name="5-sub-1-credits" value="3" min="0" max="10"
+                            readonly>
+                        <label for="5-sub-1-marks">Marks:</label>
+                        <input type="number" id="5-sub-1-marks" name="5-sub-1-marks" min="0" max="100" required>
+
+                        <br><br>
+
+                        <label for="5-sub-2-credits">Computer Networks - Credits:</label>
+                        <input type="number" id="5-sub-2-credits" name="5-sub-2-credits" value="4" min="0" max="10"
+                            readonly>
+                        <label for="5-sub-2-marks">Marks:</label>
+                        <input type="number" id="5-sub-2-marks" name="5-sub-2-marks" min="0" max="100" required>
+
+                        <br><br>
+
+                        <label for="5-sub-3-credits">Database Management Systems - Credits:</label>
+                        <input type="number" id="5-sub-3-credits" name="5-sub-3-credits" value="3" min="0" max="10"
+                            readonly>
+                        <label for="5-sub-3-marks">Marks:</label>
+                        <input type="number" id="5-sub-3-marks" name="5-sub-3-marks" min="0" max="100" required>
+
+                        <br><br>
+                        <label for="5-sub-4-credits">Artificial Intelligence and Machine Learning - Credits:</label>
+                        <input type="number" id="5-sub-4-credits" name="5-sub-4-credits" value="3" min="0" max="10"
+                            readonly>
+                        <label for="5-sub-4-marks">Marks:</label>
+                        <input type="number" id="5-sub-4-marks" name="5-sub-4-marks" min="0" max="100" required>
+
+                        <br><br>
+                        <label for="5-sub-5-credits">Database Management Systems Laboratory with Mini Project - Credits:</label>
+                        <input type="number" id="5-sub-5-credits" name="5-sub-5-credits" value="1" min="0" max="10"
+                            readonly>
+                        <label for="5-sub-5-marks">Marks:</label>
+                        <input type="number" id="5-sub-5-marks" name="5-sub-5-marks" min="0" max="100" required>
+
+                        <br><br>
+                        <label for="5-sub-6-credits">Research Methodology & Intellectual Property Rights - Credits:</label>
+                        <input type="number" id="5-sub-6-credits" name="5-sub-6-credits" value="2" min="0" max="10"
+                            readonly>
+                        <label for="5-sub-6-marks">Marks:</label>
+                        <input type="number" id="5-sub-6-marks" name="5-sub-6-marks" min="0" max="100" required>
+
+                        <br><br>
+                        <label for="5-sub-7-credits">Environmental Studies - Credits:</label>
+                        <input type="number" id="5-sub-7-credits" name="5-sub-7-credits" value="1" min="0" max="10"
+                            readonly>
+                        <label for="5-sub-7-marks">Marks:</label>
+                        <input type="number" id="5-sub-7-marks" name="5-sub-7-marks" min="0" max="100" required>
+
+                        <br><br>
+                        <label for="5-sub-8-credits"> Ability Enhancement Course-V - Credits:</label>
+                        <input type="number" id="5-sub-8-credits" name="5-sub-8-credits" value="1" min="0" max="10"
+                            readonly>
+                        <label for="5-sub-8-marks">Marks:</label>
+                        <input type="number" id="5-sub-8-marks" name="5-sub-8-marks" min="0" max="100" required>
+
+                        <br><br>
+
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingsix">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsesix" aria-expanded="false" aria-controls="collapseTwo">
+                    6 SEMESTER
+                </button>
+            </h2>
+            <div id="collapsesix" class="accordion-collapse collapse" aria-labelledby="headingsix"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <form id="form-6" onsubmit="formdata(6,8); return false;">
+                        <h2>Enter Subject Credits and Marks</h2>
+
+                        <label for="6-sub-1-credits">Software Engineering & Project Management - Credits: </label>
+                        <input type="number" id="6-sub-1-credits" name="6-sub-1-credits" value="3" min="0" max="10"
+                            readonly>
+                        <label for="6-sub-1-marks">Marks:</label>
+                        <input type="number" id="6-sub-1-marks" name="6-sub-1-marks" min="0" max="100" required>
+
+                        <br><br>
+
+                        <label for="6-sub-2-credits">Fullstack Development - Credits:</label>
+                        <input type="number" id="6-sub-2-credits" name="6-sub-2-credits" value="4" min="0" max="10"
+                            readonly>
+                        <label for="6-sub-2-marks">Marks:</label>
+                        <input type="number" id="6-sub-2-marks" name="6-sub-2-marks" min="0" max="100" required>
+
+                        <br><br>
+
+                        <label for="6-sub-3-credits">Computer Graphics andFundamentals of Image Processing - Credits:</label>
+                        <input type="number" id="6-sub-3-credits" name="6-sub-3-credits" value="3" min="0" max="10"
+                            readonly>
+                        <label for="6-sub-3-marks">Marks:</label>
+                        <input type="number" id="6-sub-3-marks" name="6-sub-3-marks" min="0" max="100" required>
+
+                        <br><br>
+                        <label for="6-sub-4-credits">Professional Elective Course-I - Credits:</label>
+                        <input type="number" id="6-sub-4-credits" name="6-sub-4-credits" value="3" min="0" max="10"
+                            readonly>
+                        <label for="6-sub-4-marks">Marks:</label>
+                        <input type="number" id="6-sub-4-marks" name="6-sub-4-marks" min="0" max="100" required>
+
+                        <br><br>
+                        <label for="6-sub-5-credits">Open Elective Course-I - Credits:</label>
+                        <input type="number" id="6-sub-5-credits" name="6-sub-5-credits" value="3" min="0" max="10"
+                            readonly>
+                        <label for="6-sub-5-marks">Marks:</label>
+                        <input type="number" id="6-sub-5-marks" name="6-sub-5-marks" min="0" max="100" required>
+
+                        <br><br>
+                        <label for="6-sub-6-credits">Computer Graphics and Image Processing Laboratory - Credits:</label>
+                        <input type="number" id="6-sub-6-credits" name="6-sub-6-credits" value="1" min="0" max="10"
+                            readonly>
+                        <label for="6-sub-6-marks">Marks:</label>
+                        <input type="number" id="6-sub-6-marks" name="6-sub-6-marks" min="0" max="100" required>
+
+                        <br><br>
+                        <label for="6-sub-7-credits">Mini Project - Credits:</label>
+                        <input type="number" id="6-sub-7-credits" name="6-sub-7-credits" value="2" min="0" max="10"
+                            readonly>
+                        <label for="6-sub-7-marks">Marks:</label>
+                        <input type="number" id="6-sub-7-marks" name="6-sub-7-marks" min="0" max="100" required>
+
+                        <br><br>
+                        <label for="6-sub-8-credits"> Innovation/Entrepreneurship /Societal Internship - Credits:</label>
+                        <input type="number" id="6-sub-8-credits" name="6-sub-8-credits" value="3" min="0" max="10"
+                            readonly>
+                        <label for="6-sub-8-marks">Marks:</label>
+                        <input type="number" id="6-sub-8-marks" name="6-sub-8-marks" min="0" max="100" required>
+
+                        <br><br>
+
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingseven">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseseven" aria-expanded="false" aria-controls="collapseseven">
+                    7 SEMESTER
+                </button>
+            </h2>
+            <div id="collapseseven" class="accordion-collapse collapse" aria-labelledby="headingseven"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <form id="form-7" onsubmit="formdata(7,6); return false;">
+                        <h2>Enter Subject Credits and Marks</h2>
+
+                        <label for="7-sub-1-credits">Big Data Analytics - Credits: </label>
+                        <input type="number" id="7-sub-1-credits" name="7-sub-1-credits" value="3" min="0" max="10"
+                            readonly>
+                        <label for="7-sub-1-marks">Marks:</label>
+                        <input type="number" id="7-sub-1-marks" name="7-sub-1-marks" min="0" max="100" required>
+
+                        <br><br>
+
+                        <label for="7-sub-2-credits">Cloud Computing - Credits:</label>
+                        <input type="number" id="7-sub-2-credits" name="7-sub-2-credits" value="2" min="0" max="10"
+                            readonly>
+                        <label for="7-sub-2-marks">Marks:</label>
+                        <input type="number" id="7-sub-2-marks" name="7-sub-2-marks" min="0" max="100" required>
+
+                        <br><br>
+
+                        <label for="7-sub-3-credits">Professional elective Course-II - Credits:</label>
+                        <input type="number" id="7-sub-3-credits" name="7-sub-3-credits" value="3" min="0" max="10"
+                            readonly>
+                        <label for="7-sub-3-marks">Marks:</label>
+                        <input type="number" id="7-sub-3-marks" name="7-sub-3-marks" min="0" max="100" required>
+
+                        <br><br>
+                        <label for="7-sub-4-credits">Professional elective Course-III - Credits:</label>
+                        <input type="number" id="7-sub-4-credits" name="7-sub-4-credits" value="3" min="0" max="10"
+                            readonly>
+                        <label for="7-sub-4-marks">Marks:</label>
+                        <input type="number" id="7-sub-4-marks" name="7-sub-4-marks" min="0" max="100" required>
+
+                        <br><br>
+                        <label for="7-sub-5-credits">Open elective Course-II - Credits:</label>
+                        <input type="number" id="7-sub-5-credits" name="7-sub-5-credits" value="3" min="0" max="10"
+                            readonly>
+                        <label for="7-sub-5-marks">Marks:</label>
+                        <input type="number" id="7-sub-5-marks" name="7-sub-5-marks" min="0" max="100" required>
+
+                        <br><br>
+                        <label for="7-sub-6-credits">Project work - Credits:</label>
+                        <input type="number" id="7-sub-6-credits" name="7-sub-6-credits" value="10" min="0" max="10"
+                            readonly>
+                        <label for="7-sub-6-marks">Marks:</label>
+                        <input type="number" id="7-sub-6-marks" name="7-sub-6-marks" min="0" max="100" required>
+
+                        <br><br>
+
+                        <input type="submit" value="Submit">
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingeight">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseeight" aria-expanded="false" aria-controls="collapseeight">
+                    8 SEMESTER
+                </button>
+            </h2>
+            <div id="collapseeight" class="accordion-collapse collapse" aria-labelledby="headingseven"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <form id="form-8" onsubmit="formdata(8,2); return false;">
+                        <h2>Enter Subject Credits and Marks</h2>
+
+                        <label for="8-sub-1-credits">Technical Seminar - Credits: </label>
+                        <input type="number" id="8-sub-1-credits" name="8-sub-1-credits" value="1" min="0" max="10"
+                            readonly>
+                        <label for="8-sub-1-marks">Marks:</label>
+                        <input type="number" id="8-sub-1-marks" name="8-sub-1-marks" min="0" max="100" required>
+
+                        <br><br>
+
+                        <label for="8-sub-2-credits">Research Internship/ Industry Internship - Credits:</label>
+                        <input type="number" id="8-sub-2-credits" name="8-sub-2-credits" value="15" min="0" max="10"
+                            readonly>
+                        <label for="8-sub-2-marks">Marks:</label>
+                        <input type="number" id="8-sub-2-marks" name="8-sub-2-marks" min="0" max="100" required>
+
+                        <br><br>
+
+                        <input type="submit" value="Submit">
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sticky CGPA and SGPA Scores at the Bottom -->
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <div class="col-12 mb-3">
+                <div class="alert alert-success" role="alert">
+                    Your CGPA: <span id="cgpa">0</span>
+                </div>
+            </div>
+
+            <div class="col-3 custom-col">
+                <div class="alert alert-info" role="alert">
+                    Sem 1 SGPA: <span id="sgpa-1" class="accord">0</span>
+                </div>
+            </div>
+            <div class="col-3 custom-col">
+                <div class="alert alert-info" role="alert">
+                    Sem 2 SGPA: <span id="sgpa-2" class="accord">0</span>
+                </div>
+            </div>
+            <div class="col-3 custom-col">
+                <div class="alert alert-info" role="alert">
+                    Sem 3 SGPA: <span id="sgpa-3" class="accord">0</span>
+                </div>
+            </div>
+            <div class="col-3 custom-col">
+                <div class="alert alert-info" role="alert">
+                    Sem 4 SGPA: <span id="sgpa-4" class="accord">0</span>
+                </div>
+            </div>
+            <div class="col-3 custom-col">
+                <div class="alert alert-info" role="alert">
+                    Sem 5 SGPA: <span id="sgpa-5" class="accord">0</span>
+                </div>
+            </div>
+            <div class="col-3 custom-col">
+                <div class="alert alert-info" role="alert">
+                    Sem 6 SGPA: <span id="sgpa-6" class="accord">0</span>
+                </div>
+            </div>
+            <div class="col-3 custom-col">
+                <div class="alert alert-info" role="alert">
+                    Sem 7 SGPA: <span id="sgpa-7" class="accord">0</span>
+                </div>
+            </div>
+            <div class="col-3 custom-col">
+                <div class="alert alert-info" role="alert">
+                    Sem 8 SGPA: <span id="sgpa-8" class="accord">0</span>
+                </div>
+            </div>
+            <!-- Add similar divs for the rest of the SGPA values -->
+        </div>
+    </div>
+
+
+</body>
+
+</html>
