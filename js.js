@@ -19,7 +19,13 @@ const update = () => {
         }
     }
     cgpa = (numerator / denominator).toFixed(2)
-    console.log(cgpa)
+}
+const showcredit=(sem)=>{
+    let element=document.getElementById(`sgpa-${sem}`);
+    let check=element.getAttribute("class").split(" ")
+    if(!check.includes("visible")){
+        element.classList.add("visible")
+    }
 }
 const formdata = (sem, subs) => {
     let marks = [], credits = [];
@@ -30,9 +36,8 @@ const formdata = (sem, subs) => {
         credits.push(credit);
         marks.push(mark);
     }
-    console.log(marks);
-    console.log(credits);
     calculate(marks,credits,sem);
     document.getElementById("cgpa").innerHTML=cgpa;
-    document.getElementById(`sgpa-${sem}`).innerHTML=sgpa[sem-1];
+    document.getElementById(`sgpa-${sem}`).innerHTML=`SGPA: ${sgpa[sem-1]}`;
+    showcredit(sem);
 }
