@@ -101,8 +101,8 @@ input[type="submit"]:hover {
 /* SGPA Indicator */
 .sgpa-indicator {
   margin-left: 1%;
-  border-radius: 50%;
-  padding: 0.5%;
+  border-radius: 0.7rem;
+  padding: 0.6%;
   background-color: #bef9bf;
   font-size: 0.7rem;
   visibility: hidden;
