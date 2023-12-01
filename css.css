@@ -1,83 +1,95 @@
 /* Custom CSS for styling and responsiveness of accordions */
 /* Make the accordion headers distinct */
 .accordion-button {
-    background-color: #f8f9fa;
-    color: #333;
-    border: 1px solid #dee2e6;
-    border-radius: 0.25rem;
-    margin-bottom: 1rem;
-    padding: 1rem;
-    cursor: pointer;
+  background-color: #f8f9fa;
+  color: #333;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+/* Style the active accordion header */
+.accordion-button.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Set initial state of collapse content */
+.accordion-collapse {
+  display: none;
+}
+
+/* Show active accordion content */
+.accordion-collapse.show {
+  display: block;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .accordion-button {
+    font-size: 16px;
   }
-  
-  /* Style the active accordion header */
-  .accordion-button.active {
-    background-color: #007bff;
-    color: #fff;
-  }
-  
-  /* Set initial state of collapse content */
-  .accordion-collapse {
-    display: none;
-  }
-  
-  /* Show active accordion content */
-  .accordion-collapse.show {
-    display: block;
-  }
-  
-  /* Media query for responsiveness */
-  @media (max-width: 768px) {
-    .accordion-button {
-      font-size: 16px;
-    }
-  }
+}
+
 /* Basic styling for the form elements */
 form {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
 }
 
 h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
 label {
-    display: block;
-    margin-bottom: 5px;
+  display: block;
+  margin-bottom: 5px;
 }
 
 input[type="number"] {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
 }
 
 input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 input[type="submit"]:hover {
-    background-color: #45a049;
+  background-color: #45a049;
 }
 
 /* Responsive adjustments */
 @media (max-width: 767px) {
-    form {
-        max-width: 100%;
-    }
+  form {
+    max-width: 100%;
+  }
 }
-  
+
+.sgpa-indicator {
+  margin-left: 1%;
+  border-radius: 50%;
+  padding: 0.5%;
+  background-color: #bef9bf;
+  font-size: 0.7rem;
+  visibility: hidden;
+}
+.visible .sgpa-indicator{
+  visibility: visible;
+}
