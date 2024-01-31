@@ -95,6 +95,7 @@ input[type="submit"]:hover {
   }
   .sgpa-indicator {
     padding: 2%;
+    margin:2%;
   }
 }
 
